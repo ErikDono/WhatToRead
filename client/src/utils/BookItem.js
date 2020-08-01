@@ -1,10 +1,9 @@
 import React from "react";
 
-const BookInfo = React.createContext({
-    Title:"",
-    Author:"",
-    url:"",
+const bookItem = React.createContext({
+  title: "",
+  Author:"",
+ url: ""
+});
 
-})
-
-export default BookInfo
+export default bookItem;
