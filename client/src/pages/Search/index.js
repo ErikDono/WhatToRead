@@ -34,11 +34,9 @@ function Search() {
           throw new Error(res.data.message);
         }
         console.log(res.data.items[1].volumeInfo);
-        setBookState({
-          title: res.data.items[1].volumeInfo.title,
-          Author: res.data.items[1].volumeInfo.authors,
-          url: res.data.items[1].volumeInfo.infoLink,
-        });
+        setBookState(
+         res.data.items
+        );
       })
       .catch(err => setError(err));
   }, [search]);
@@ -61,7 +59,12 @@ function Search() {
             handleInputChange={handleInputChange}
             results={search}
           />
-          <SearchResults />
+
+        {bookState.length>0 && bookState.map((book)=>
+          <SearchResults data={book.volumeInfo}/>
+        )
+        }
+    
         </Container>
       </div>
     </BookItem.Provider>

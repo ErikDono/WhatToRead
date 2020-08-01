@@ -1,21 +1,18 @@
 import React, { useContext } from "react";
-import BookItem from "../../utils/BookItem";
-import {Container, CardTitle, Card} from "reactstrap"
-import API from "../../utils/API"
-import bookItem from "../../utils/BookItem";
+import { Container, CardTitle, Card, Button } from "reactstrap";
 
+function SearchResults(props) {
+  const { title, authors, url } = props.data;
 
-
-function SearchResults() {
-  const {title, Author, url} = useContext(BookItem);
-  console.log(bookItem)
   return (
     <Container>
       <ul className="list-group search-results">
         <li className="list-group-item">
           <h2>{title}</h2>
-          <h2>{Author}</h2>
+          <h2>{authors}</h2>
           <a href={url}>{url}</a>
+          {/* post props.data */}
+          <Button />
         </li>
       </ul>
     </Container>
