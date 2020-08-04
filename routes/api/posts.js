@@ -5,7 +5,11 @@ const controller = require("../../controller/main_controller");
 router
   .route("/")
   .get(controller.getAllBooks)
-  .post(controller.savePost);
+  .post(controller.create);
+
+router
+.route("/:title")
+.put(controller.savePost)
   
 
 module.exports = router;

@@ -8,16 +8,14 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div>
+    <div>
+      <Router>
         <Navi />
-          <Route exact path="/" component={Search} />
-          <Route exact path="/saved" component={Saved} />
-          <Route exact path="/search" component={Search} />
-        
-        <Footer />
-      </div>
-    </Router>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/saved" component={Saved} />
+      </Router>
+      <Footer />
+    </div>
   );
 }
 

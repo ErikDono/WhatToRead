@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Navi = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -26,11 +26,7 @@ const Navi = (props) => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <NavItem>
-                  <Link
-                    href="/"
-                  >
-                    Home
-                  </Link>
+                  <Link to="/">Home</Link>
                 </NavItem>
               </li>
               <li className="nav-item">
@@ -43,8 +39,7 @@ const Navi = (props) => {
                         : "nav-link"
                     }
                   />
-                  Saved
-
+                  <Link to="/saved">Saved</Link>
                 </NavItem>
               </li>
             </ul>

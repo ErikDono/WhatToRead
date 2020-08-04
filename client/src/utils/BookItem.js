@@ -2,7 +2,7 @@ import React from "react";
 
 const bookItem = React.createContext({
   title: "",
-  Author:"",
+  Authors:"",
  url: ""
 });
 
